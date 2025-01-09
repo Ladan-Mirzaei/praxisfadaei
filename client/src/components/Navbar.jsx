@@ -3,7 +3,7 @@ import "../styles/Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">DR Kambiz Fadaei </div>
+      <div className="logo">Dr.Kambiz Fadaei </div>
       <ul>
         <li>
           <a href="#services">Unsere Leistungen</a>
