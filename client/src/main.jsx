@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
 
-// Router-Konfiguration
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +17,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Rendern der Anwendung
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />

@@ -1,5 +1,3 @@
-import "../styles/Slider.css";
-
 function Slider() {
   return (
     <div className="slider">
