@@ -1,25 +1,22 @@
-import { Link } from "react-router-dom";
-import "./Navbar.css";
-import Login from "./Login.jsx";
-import Logout from "./Logout.jsx";
+import "../styles/Navbar.css";
 
-const Navbar = ({ cartCount }) => {
+function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-left">
-        <h1>Luxora</h1>
-      </div>
-      <div className="navbar-center">
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/cart">Cart({cartCount})</Link>
-      </div>
-      <div className="navbar-right">
-        <Login />
-        <Logout />
-      </div>
+      <div className="logo">DR Kambiz Fadaei </div>
+      <ul>
+        <li>
+          <a href="#services">Unsere Leistungen</a>
+        </li>
+        <li>
+          <a href="#team">Unser Team</a>
+        </li>
+        <li>
+          <a href="#contact">Kontakt</a>
+        </li>
+      </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;

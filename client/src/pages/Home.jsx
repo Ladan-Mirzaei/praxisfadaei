@@ -1,88 +1,70 @@
-import "./Home.css";
-import { Link } from "react-router-dom";
-// import ProductCard from "../components/ProductCard.jsx";
-import { useEffect, useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
-import AddToCartButton from "../components/AddToCart.jsx";
+import Slider from "../components/Slider";
+import "../styles/Home.css";
+import {
+  FaStethoscope,
+  FaUserMd,
+  FaHospital,
+  FaHeartbeat,
+} from "react-icons/fa";
 
 function Home() {
-  const [products, setProducts] = useState([]);
-  const { getAccessTokenSilently, isAuthenticated } = useAuth0();
-
-  const API_URL = import.meta.env.VITE_API_URL;
-
-  useEffect(() => {
-    async function fetchBestSelling() {
-      try {
-        let accessToken = "";
-        if (isAuthenticated) {
-          accessToken = await getAccessTokenSilently();
-        }
-        const response = await fetch(`${API_URL}/products/bestSelling`, {
-          headers: {
-            Authorization: accessToken ? `Bearer ${accessToken}` : undefined,
-          },
-        });
-
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    }
-    fetchBestSelling();
-  }, [isAuthenticated, getAccessTokenSilently]);
-
   return (
-    <>
-      <div className="home-content">
-        <div className="home-header">
-          <h1>Make Your Interior More Minimalistic & Modern</h1>
-          <p>
-            Turn your room with panto into a lot more minimalist and modern with
-            ease and speed
-          </p>
+    <div className="home">
+      <Slider />
+
+      <section className="features">
+        <div className="feature">
+          <FaStethoscope size={50} color="#295590" />
+          <p>Vorsorgeuntersuchungen</p>
         </div>
+        <div className="feature">
+          <FaUserMd size={50} color="#295590" />
+          <p>Hausärztliche Versorgung</p>
+        </div>
+        <div className="feature">
+          <FaHospital size={50} color="#295590" />
+          <p>Diagnostik</p>
+        </div>
+        <div className="feature">
+          <FaHeartbeat size={50} color="#295590" />
+          <p>Kardiologie</p>
+        </div>
+      </section>
 
-        <section className="best-selling">
-          <h2>Best Selling Products</h2>
-          <div className="product-cards">
-            {products.map((product) => (
-              <div className="card" key={product._id}>
-                <Link to={`/products/${product._id}`}>
-                  <img src={product.image} alt={product.name} />
-                </Link>
-                <h4>{product.categoryId?.name || "N/A"}</h4>
-                <h3>{product.name}</h3>
-                {/* <div> */}
-                <p>
-                  <span>${product.price}</span>
+      {/* Willkommen-Text-Bereich */}
+      <section className="welcome-section">
+        <h1>Facharzt für Gefäßchirurgie und Endovaskuläre Chirurgie</h1>
+        <p>
+          Herzlich willkommen in unserer Praxis für Gefäßchirurgie und
+          endovaskuläre Chirurgie. Unser Team bietet Ihnen modernste
+          medizinische Versorgung und individuelle Betreuung in allen Bereichen
+          der Gefäßmedizin. Wir sind spezialisiert auf die Diagnose und
+          Behandlung von Erkrankungen der Blutgefäße und Lymphgefäße.
+        </p>
+        <p>
+          Zu unseren Leistungen gehören unter anderem die Behandlung von
+          Krampfadern, Arterienerkrankungen, Aneurysmen sowie minimalinvasive
+          endovaskuläre Eingriffe. Unser Ziel ist es, Ihnen eine erstklassige
+          medizinische Versorgung und persönliche Betreuung auf höchstem Niveau
+          zu bieten.
+        </p>
+        <p>
+          Ihre Gesundheit und Ihr Wohlbefinden stehen bei uns an erster Stelle.
+          Wir freuen uns darauf, Sie in unserer Praxis begrüßen zu dürfen!
+        </p>
+      </section>
 
-                  <AddToCartButton productId={product._id} />
-
-                  {/* </div> */}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <Link to="/products" className="view-all">
-            View All →
-          </Link>
-        </section>
-
-        <section className="subscription">
-          <h2>Subscribe to get the latest news about us</h2>
+      {/* Zitat-Bereich */}
+      <section className="quote-section">
+        <div className="quote-box">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+            „Es ist der größte Reichtum, gesund zu sein. In einem gesunden
+            Körper wohnt ein glücklicher Geist.“
           </p>
-          {/* <div className="qr-code">
-            <img src="../../public/qr-code.png" alt="QR Code" />
-          </div> */}
-        </section>
-      </div>
-    </>
+          <span>– Deutsches Sprichwort</span>
+        </div>
+      </section>
+    </div>
   );
 }
 
