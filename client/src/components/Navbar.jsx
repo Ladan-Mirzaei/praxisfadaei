@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,6 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <div className="logo">
           <span>Dr. Kambiz Fadaei</span>
           <span className="subtitle">Facharzt für Gefäßchirurgie</span>
@@ -24,10 +24,12 @@ function Navbar() {
           <span className={isOpen ? "line line3 open" : "line line3"}></span>
         </button>
 
-        {/* Navigation Links */}
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        <li>
+          <NavLink to="/">Startseite</NavLink>
+          </li>
           <li>
-            <a href="#services">Unsere Leistungen</a>
+          <NavLink to="/behandlung-gefaesserkrankungen">Behandlung</NavLink>
           </li>
           <li>
             <a href="#team">Unser Team</a>
