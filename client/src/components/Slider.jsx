@@ -1,13 +1,23 @@
+import React from "react";
+import "../styles/Navbar.css";
+
 function Slider() {
   return (
     <div className="slider">
       <div className="slide">
-        <h2>Online-Termin</h2>
-        <p>
-          Vereinbaren Sie jetzt Ihren Termin einfach und bequem über unser
-          Online-Formular.
-        </p>
-        <button>Termin vereinbaren</button>
+       
+          <a
+            href="https://www.doctolib.de/einzelpraxis/sankt-augustin/gefaesschirurgische-praxis-dr-fadaei"
+            className="appointment-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Termin buchen
+            <img
+              src="https://pro.doctolib.de/external_button/doctolib-white-transparent.png"
+              alt="Doctolib"
+            />
+          </a>
       </div>
     </div>
   );

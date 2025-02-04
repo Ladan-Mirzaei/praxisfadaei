@@ -14,7 +14,7 @@ function Navbar() {
         </div>
 
         {/* Hamburger Menu Button - Only visible on small screens */}
-        <button
+        {/* <button
           className="hamburger sm:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
@@ -22,14 +22,24 @@ function Navbar() {
           <span className={isOpen ? "line line1 open" : "line line1"}></span>
           <span className={isOpen ? "line line2 open" : "line line2"}></span>
           <span className={isOpen ? "line line3 open" : "line line3"}></span>
-        </button>
+        </button> */}
 
-        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        {/* <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
           <NavLink to="/">Startseite</NavLink>
+          </li> */}
+          {/* <li>
+          <NavLink to="/behandlung-gefaesserkrankungen">Krankheitsbilder</NavLink>
           </li>
           <li>
-          <NavLink to="/behandlung-gefaesserkrankungen">Behandlung</NavLink>
+          <NavLink to="/behandlung-gefaesserkrankungen">Diagnostik</NavLink>
+          </li>
+           */}
+          {/* <li>
+          <NavLink to="/behandlung-gefaesserkrankungen">Leistungen</NavLink>
+          </li>
+          <li>
+          <NavLink to="/behandlung-gefaesserkrankungen">Termin</NavLink>
           </li>
           <li>
             <a href="#team">Unser Team</a>
@@ -37,7 +47,7 @@ function Navbar() {
           <li>
             <a href="#contact">Kontakt</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

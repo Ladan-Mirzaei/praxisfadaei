@@ -12,14 +12,14 @@ function Home() {
     <div className="home">
       <Slider />
 
-      <section className="features">
+      {/* <section className="features">
         <div className="feature">
           <FaStethoscope size={50} color="#295590" />
           <p>Vorsorgeuntersuchungen</p>
         </div>
         <div className="feature">
           <FaUserMd size={50} color="#295590" />
-          <p>Hausärztliche Versorgung</p>
+          <p>Häusliche Versorgung</p>
         </div>
         <div className="feature">
           <FaHospital size={50} color="#295590" />
@@ -27,40 +27,27 @@ function Home() {
         </div>
         <div className="feature">
           <FaHeartbeat size={50} color="#295590" />
-          <p>Kardiologie</p>
+          <p>Krankheitsbilder</p>
         </div>
-      </section>
+      </section> */}
 
       {/* Willkommen-Text-Bereich */}
       <section className="welcome-section">
-  <div className="image-container">
-    <img src="Bauer_Fadaei-1200x900.jpg" alt="Dr. Kambiz Fadaei" />
-  </div>
+  
 
   <div className="text-container">
-    <h1>
-      Dr. Kambiz Fadaei - Facharzt für Gefäßchirurgie und Endovaskuläre
-      Chirurgie
-    </h1>
+    <h2>
+    Wir sind bald für Sie da!
 
-    <p>
-      Herzlich willkommen in unserer Praxis für Gefäßchirurgie und
-      endovaskuläre Chirurgie. Unser Team bietet Ihnen modernste
-      medizinische Versorgung und individuelle Betreuung in allen Bereichen
-      der Gefäßmedizin. Wir sind spezialisiert auf die Diagnose und
-      Behandlung von Erkrankungen der Blutgefäße und Lymphgefäße.
-    </p>
-    <p>
-      Zu unseren Leistungen gehören unter anderem die Behandlung von
-      Krampfadern, Arterienerkrankungen, Aneurysmen sowie minimalinvasive
-      endovaskuläre Eingriffe. Unser Ziel ist es, Ihnen eine erstklassige
-      medizinische Versorgung und persönliche Betreuung auf höchstem Niveau
-      zu bieten.
-    </p>
-    <p>
-      Ihre Gesundheit und Ihr Wohlbefinden stehen bei uns an erster Stelle.
-      Wir freuen uns darauf, Sie in unserer Praxis begrüßen zu dürfen!
-    </p>
+Unsere Website befindet sich aktuell im Aufbau. Wir arbeiten mit Hochdruck daran, Ihnen bald ein ansprechendes und informatives Online-Erlebnis bieten zu können. <br/>In der Zwischenzeit können Sie dennoch bequem online einen Termin bei DoctoLib vereinbaren.
+
+<br/>Vielen Dank für Ihr Verständnis – bleiben Sie gespannt!
+
+
+      
+    </h2>
+
+    
   </div>
 </section>
 
